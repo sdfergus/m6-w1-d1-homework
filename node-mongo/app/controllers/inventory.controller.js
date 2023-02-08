@@ -11,7 +11,7 @@ exports.createInventory = ( req, res ) => {
     status: req.body.status
   } );
 
-  //save Inventory in the MongoDB
+  //saves Inventory in the MongoDB
   inventory.save().then( data => {
     res.status( 200 ).json( data );
   } ).catch( err => {
